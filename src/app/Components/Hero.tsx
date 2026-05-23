@@ -1,6 +1,11 @@
+"use client"
+import { useRouter } from "next/navigation";
 import Navbar from "./Navbar";
 
+
+
 const Hero = () => {
+    const router = useRouter()
     return (
         <section className="relative w-full h-screen overflow-hidden  ">
             {/* 🌫️ SMART “BLANKET” OVER VIDEO */}
@@ -108,11 +113,15 @@ const Hero = () => {
 
                         <div className="mt-4 flex gap-4 justify-center md:justify-start">
 
-                            <button className="px-3 md:px-6 py-2 md:py-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20 transition">
+                            <button className="px-3 md:px-6 py-2 md:py-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20 transition" onClick={() => {
+                                router.push("/projects")
+                            }}>
                                 View Projects
                             </button>
 
-                            <button className="px-3 md:px-6 py-2 md:py-3 rounded-full bg-linear-to-r from-cyan-500 to-purple-500 text-black font-semibold hover:opacity-90 transition">
+                            <button className="px-3 md:px-6 py-2 md:py-3 rounded-full bg-linear-to-r from-cyan-500 to-purple-500 text-black font-semibold hover:opacity-90 transition" onClick={() => {
+                                router.push("/#contact")
+                            }}>
                                 Contact Me
                             </button>
 
