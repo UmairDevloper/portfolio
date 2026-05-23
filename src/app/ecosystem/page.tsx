@@ -15,7 +15,8 @@ import {
     SiDevdotto,
 } from "react-icons/si";
 
-import { motion } from "framer-motion";
+import { Variants, easeOut, motion } from "framer-motion";
+
 
 const ecosystem = [
     {
@@ -79,17 +80,20 @@ const container = {
     },
 };
 
-const card = {
-    hidden: { opacity: 0, y: 25 },
+    const card: Variants = {
+    hidden: {
+        opacity: 0,
+        y: 20,
+    },
     show: {
         opacity: 1,
         y: 0,
         transition: {
-            duration: 0.5,
-            ease: "easeOut",
+        duration: 0.6,
+        ease: easeOut,
         },
     },
-};
+    };
 
 export default function EcosystemPage() {
     return (
