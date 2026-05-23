@@ -11,9 +11,9 @@ export async function POST(req) {
     }
 
     const data = await resend.emails.send({
-      from: "Portfolio Contact <onboarding@resend.dev>", // FIXED
-      replyTo: email, // IMPORTANT (so you can reply)
-      to: "m.umair.ullah01@gmail.com",
+      from: "Portfolio <onboarding@resend.dev>",
+      to: "muhammadumairullah669@gmail.com",
+      replyTo: email,
       subject: `New Contact from ${name}`,
       html: `
         <h2>New Portfolio Message</h2>
@@ -24,7 +24,6 @@ export async function POST(req) {
       `,
     });
 
-    console.log("Resend response:", data);
 
     return Response.json({ success: true });
   } catch (error) {
