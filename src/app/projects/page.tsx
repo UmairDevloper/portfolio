@@ -18,27 +18,31 @@ import {
     SiOpenai,
     SiPostgresql,
     SiFastapi,
+    SiPrisma, SiVercel, SiGoogle
 } from "react-icons/si";
 
 import DarkAmbientSection from "../Components/layouts/DarkBg";
 
 const projects = [
     {
-        title: "AI Workflow Automation Platform",
+        title: "Intern-Track",
         description:
-            "Production-focused automation platform integrating AI agents, scalable workflows, API orchestration, and deployment-ready infrastructure.",
+            "A full-stack internship application tracker built with Next.js, Prisma, and PostgreSQL.",
 
-        image: "/projects/project1.png",
+        image: "/pro1.png",
 
         tech: [
             { icon: <SiNextdotjs />, name: "Next.js" },
-            { icon: <SiNodedotjs />, name: "Node.js" },
-            { icon: <SiDocker />, name: "Docker" },
-            { icon: <SiOpenai />, name: "OpenAI" },
+            { icon: <SiPrisma />, name: "Prisma" },
+            { icon: <SiPostgresql />, name: "PostgreSQL" },
+            { icon: <SiTailwindcss />, name: "Tailwind" },
+            { icon: <SiVercel />, name: "Vercel" },
+            { icon: <SiGoogle />, name: "Auth.js" },
+
         ],
 
-        github: "https://github.com/yourusername/project",
-        live: "https://yourproject.vercel.app",
+        github: "https://github.com/UmairDevloper/InternTrack-Project",
+        live: "https://intern-track-project-nine.vercel.app/",
     },
 
     {
