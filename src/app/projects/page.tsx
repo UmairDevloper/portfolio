@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import {
     FaGithub,
     FaExternalLinkAlt,
-    FaPlayCircle 
+    FaPlayCircle
 } from "react-icons/fa";
 
 import {
@@ -20,6 +20,8 @@ import {
     SiPostgresql,
     SiFastapi,
     SiGooglegemini,
+    SiPython,
+    SiJsonwebtokens,
     SiPrisma, SiVercel, SiGoogle
 } from "react-icons/si";
 
@@ -32,7 +34,7 @@ const projects = [
             "A full-stack internship application tracker built with Next.js, Prisma, and PostgreSQL.",
 
         image: "/pro1.png",
-        video: "/pro2-demo.mp4",
+        video: "/vid1.mp4",
         tech: [
             { icon: <SiNextdotjs />, name: "Next.js" },
             { icon: <SiPrisma />, name: "Prisma" },
@@ -53,7 +55,7 @@ const projects = [
             "An AI-powered resume analyzer that scores resumes against job descriptions, using Google's Gemini API to generate ATS match scores with actionable feedback.",
 
         image: "/pro2.png",
-        video: "/pro2-demo.mp4",
+        video: "/vid2.mp4",
 
         tech: [
             { icon: <SiNextdotjs />, name: "Next.js" },
@@ -70,21 +72,20 @@ const projects = [
     },
 
     {
-        title: "AI Resume Analyzer",
+        title: "SecureAuth API",
         description:
-            "AI-powered resume analysis platform using intelligent parsing, ATS optimization logic, and real-time feedback generation for candidates.",
+            "A backend authentication and authorization system built with FastAPI, featuring JWT-based login, role-based access control, and password hashing for secure API access.",
 
-        image: "/projects/project3.png",
+        image: "/pro3.jpeg",
+        video: "/vid3.mp4",
 
         tech: [
             { icon: <SiFastapi />, name: "FastAPI" },
-            { icon: <SiPostgresql />, name: "PostgreSQL" },
-            { icon: <SiOpenai />, name: "OpenAI" },
-            { icon: <SiTailwindcss />, name: "Tailwind" },
+            { icon: <SiPython />, name: "Python" },
+            { icon: <SiJsonwebtokens />, name: "JWT" },
         ],
 
-        github: "https://github.com/yourusername/project",
-        live: "https://yourproject.vercel.app",
+        github: "https://github.com/UmairDevloper/FastAPI-Complete-Guide/tree/main/Authentication%20%26%20Authorization",
     },
 ];
 
@@ -296,80 +297,75 @@ export default function ProjectsPage() {
                                 </div>
 
                                 {/* BUTTONS */}
-                                <div className="mt-8 flex gap-3">
+                                <div className="mt-8 flex flex-wrap items-center gap-3">
 
                                     {/* GITHUB */}
-                                    <Link
-                                        href={project.github}
-                                        target="_blank"
-                                        className="
-                                        flex items-center gap-2
+                                    {project.github && (
+                                        <Link
+                                            href={project.github}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="
+                flex items-center justify-center gap-2
+                px-4 sm:px-5 py-2.5 sm:py-3
+                rounded-2xl
+                bg-white/5
+                border border-white/10
+                text-white text-sm sm:text-base
+                hover:bg-white/10
+                transition
+            "
+                                        >
+                                            <FaGithub />
+                                            GitHub
+                                        </Link>
+                                    )}
 
-                                        px-5 py-3
-                                        rounded-2xl
-
-                                        bg-white/5
-                                        border border-white/10
-
-                                        text-white
-                                        hover:bg-white/10
-
-                                        transition
-                                    "
-                                    >
-                                        <FaGithub />
-                                        GitHub
-                                    </Link>
-
-                                    <Link
-                                        href={project.video ?? "#"}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="
-                                        flex items-center gap-2
-
-                                        px-1.5 py-2
-                                        rounded-2xl
-
-                                        bg-white/5
-                                        border border-white/10
-
-                                        text-white
-                                        hover:bg-white/10
-
-                                        transition
-                                    "
-                                    >
-                                        <FaPlayCircle size={20} />
-                                        Watch Demo
-                                    </Link>
+                                    {/* WATCH DEMO */}
+                                    {project.video && (
+                                        <Link
+                                            href={project.video}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="
+                flex items-center justify-center gap-2
+                px-4 sm:px-5 py-2.5 sm:py-3
+                rounded-2xl
+                bg-white/5
+                border border-white/10
+                text-white text-sm sm:text-base
+                hover:bg-white/10
+                transition
+            "
+                                        >
+                                            <FaPlayCircle size={18} />
+                                            Watch Demo
+                                        </Link>
+                                    )}
 
                                     {/* LIVE */}
-                                    <Link
-                                        href={project.live}
-                                        target="_blank"
-                                        className="
-                                        flex items-center gap-2
-
-                                        px-5 py-3
-                                        rounded-2xl
-
-                                        bg-gradient-to-r
-                                        from-cyan-500
-                                        via-purple-500
-                                        to-pink-500
-
-                                        text-white
-                                        font-medium
-
-                                        hover:opacity-90
-                                        transition
-                                    "
-                                    >
-                                        <FaExternalLinkAlt />
-                                        Live Demo
-                                    </Link>
-                                    
+                                    {project.live && (
+                                        <Link
+                                            href={project.live}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="
+                flex items-center justify-center gap-2
+                px-4 sm:px-5 py-2.5 sm:py-3
+                rounded-2xl
+                bg-gradient-to-r
+                from-cyan-500
+                via-purple-500
+                to-pink-500
+                text-white text-sm sm:text-base font-medium
+                hover:opacity-90
+                transition
+            "
+                                        >
+                                            <FaExternalLinkAlt />
+                                            Live Demo
+                                        </Link>
+                                    )}
 
                                 </div>
 

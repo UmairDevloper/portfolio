@@ -18,6 +18,13 @@ const certifications = [
         desc: "This certification demonstrates foundational competency in artificial intelligence and machine learning concepts, including model training, data processing, and deployment fundamentals using Oracle Cloud Infrastructure AI services. It reflects the ability to understand and apply AI workflows in real-world cloud environments.",
         link: "https://catalog-education.oracle.com/pls/certview/sharebadge?id=FF9F6F83DE7458919C58A5617DFEEFF60EA87BA9B94A2D8237713D0135037746",
     },
+    {
+        company: "Google / Coursera",
+        logo: "/google.png",
+        title: "Crash Course on Python",
+        desc: "This certification demonstrates foundational proficiency in Python programming, covering core concepts such as variables, data structures, loops, functions, and debugging. Part of Google's IT Automation with Python Professional Certificate, it reflects the ability to write and troubleshoot basic Python scripts for real-world automation tasks.",
+        link: "https://www.coursera.org/account/accomplishments/verify/VZ0SNVR765S5?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course",
+    },
 ];
 
 const container = {

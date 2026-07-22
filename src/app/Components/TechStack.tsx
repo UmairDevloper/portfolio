@@ -47,13 +47,17 @@ const techStack = [
     { icon: SiRender, name: "Render", color: "#46E3B7" },
 
     { icon: SiN8N, name: "n8n", color: "#F05A28" },
+
+    { icon: SiTailwindcss, name: "Tailwind CSS", color: "#38BDF8" },
+    { icon: SiPython, name: "Python", color: "#3776AB" },
+
 ];
 
 export default function TechStack() {
     return (
         <section
             id="tachStack"
-        className="mx-11 md:mx-12 my-8 py-10 md:py-12 px-20 md:px-22 2xl:px-25 overflow-hidden rounded-3xl
+            className="mx-11 md:mx-12 my-8 py-10 md:py-12 px-20 md:px-22 2xl:px-25 overflow-hidden rounded-3xl
                 bg-white/6 backdrop-blur-lg
                 border border-white/10">
 
