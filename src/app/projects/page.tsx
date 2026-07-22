@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import {
     FaGithub,
     FaExternalLinkAlt,
+    FaPlayCircle 
 } from "react-icons/fa";
 
 import {
@@ -18,6 +19,7 @@ import {
     SiOpenai,
     SiPostgresql,
     SiFastapi,
+    SiGooglegemini,
     SiPrisma, SiVercel, SiGoogle
 } from "react-icons/si";
 
@@ -30,7 +32,7 @@ const projects = [
             "A full-stack internship application tracker built with Next.js, Prisma, and PostgreSQL.",
 
         image: "/pro1.png",
-
+        video: "/pro2-demo.mp4",
         tech: [
             { icon: <SiNextdotjs />, name: "Next.js" },
             { icon: <SiPrisma />, name: "Prisma" },
@@ -46,21 +48,25 @@ const projects = [
     },
 
     {
-        title: "Full Stack DevOps Dashboard",
+        title: "ResumeIQ",
         description:
-            "Modern monitoring and deployment dashboard with authentication, analytics, scalable backend architecture, and cloud-ready deployment workflows.",
+            "An AI-powered resume analyzer that scores resumes against job descriptions, using Google's Gemini API to generate ATS match scores with actionable feedback.",
 
-        image: "/projects/project2.png",
+        image: "/pro2.png",
+        video: "/pro2-demo.mp4",
 
         tech: [
             { icon: <SiNextdotjs />, name: "Next.js" },
-            { icon: <SiMongodb />, name: "MongoDB" },
+            { icon: <SiPrisma />, name: "Prisma" },
+            { icon: <SiPostgresql />, name: "PostgreSQL" },
             { icon: <SiTailwindcss />, name: "Tailwind" },
-            { icon: <SiDocker />, name: "Docker" },
+            { icon: <SiVercel />, name: "Vercel" },
+            { icon: <SiGoogle />, name: "Auth.js" },
+            { icon: <SiGooglegemini />, name: "Gemini" },
         ],
 
-        github: "https://github.com/yourusername/project",
-        live: "https://yourproject.vercel.app",
+        github: "https://github.com/UmairDevloper/ResumeIQ",
+        live: "https://resume-iq-gamma-sandy.vercel.app/",
     },
 
     {
@@ -290,7 +296,7 @@ export default function ProjectsPage() {
                                 </div>
 
                                 {/* BUTTONS */}
-                                <div className="mt-8 flex gap-4">
+                                <div className="mt-8 flex gap-3">
 
                                     {/* GITHUB */}
                                     <Link
@@ -313,6 +319,29 @@ export default function ProjectsPage() {
                                     >
                                         <FaGithub />
                                         GitHub
+                                    </Link>
+
+                                    <Link
+                                        href={project.video ?? "#"}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="
+                                        flex items-center gap-2
+
+                                        px-1.5 py-2
+                                        rounded-2xl
+
+                                        bg-white/5
+                                        border border-white/10
+
+                                        text-white
+                                        hover:bg-white/10
+
+                                        transition
+                                    "
+                                    >
+                                        <FaPlayCircle size={20} />
+                                        Watch Demo
                                     </Link>
 
                                     {/* LIVE */}
@@ -340,6 +369,7 @@ export default function ProjectsPage() {
                                         <FaExternalLinkAlt />
                                         Live Demo
                                     </Link>
+                                    
 
                                 </div>
 
