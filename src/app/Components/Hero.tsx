@@ -76,8 +76,8 @@ const Hero = () => {
                                     src="/pfm3.png"
                                     alt="profile"
                                     className="
-                                        w-full h-full object-cover
-                                        scale-105
+                                        w-full h-full object-cover 
+                                        object-cover object-[50%_25%] 
                                         "
                                 />
 
